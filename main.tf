@@ -115,7 +115,7 @@ resource "aws_instance" "Terraformtest" {
   instance_type = "t2.micro"
   //subnet_id = aws_subnet.main.id
   availability_zone = "us-east-1a"
-  key_name = "ServerTestAWSVerginaia"
+  key_name = ""
   network_interface {
     device_index = 0
     network_interface_id = aws_network_interface.nic.id
