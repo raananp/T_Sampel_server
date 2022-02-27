@@ -6,7 +6,7 @@ pipeline {
     stages{
     stage('Git Pull') {
       steps {
-          git branch: 'main', changelog: false, credentialsId: '0e94bf9e-995c-40ec-92c7-ce48c250d1fb', poll: false, url: 'https://github.com/raananp/raanancom'
+          git branch: 'main', changelog: false, credentialsId: '0e94bf9e-995c-40ec-92c7-ce48c250d1fb', poll: false, url: 'https://github.com/raananp/T_Sampel_server'
       }
     }
     stage('Terraform INIT') {
@@ -16,8 +16,8 @@ pipeline {
     }
     stage('Run Terraform') {
       steps {
-          //sh label: '', script: 'terraform apply --auto-approve'
-          sh label: '', script: 'terraform destroy --auto-approve'
+          sh label: '', script: 'terraform apply --auto-approve'
+          //sh label: '', script: 'terraform destroy --auto-approve'
       }
     }
   }
